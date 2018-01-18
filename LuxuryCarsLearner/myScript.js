@@ -38,9 +38,20 @@ function loadData() {
                 document.getElementById('messageAlert').innerHTML = "You must choose a car manufacturer to load data...";
                 
             } else {
+                document.getElementById('messageAlert').innerHTML = "";
+                
                 document.getElementById('manufacturerC').innerHTML = myData.data[manufacturerStored].manufacturer;
                 document.getElementById('modelC').innerHTML = myData.data[manufacturerStored].model;
                 document.getElementById('priceC').innerHTML = myData.data[manufacturerStored].price;
+                document.getElementById('descriptionC').innerHTML = myData.data[manufacturerStored].description;
+                document.getElementById('videoC').innerHTML = '<iframe width="560" height="315" src="' + myData.data[manufacturerStored].video + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+                document.getElementById('overallC').innerHTML = myData.data[manufacturerStored].quality[0].rating;
+                document.getElementById('mechanicalC').innerHTML = myData.data[manufacturerStored].quality[1].rating;
+                document.getElementById('powertrainC').innerHTML = myData.data[manufacturerStored].quality[2].rating;
+                document.getElementById('bodyC').innerHTML = myData.data[manufacturerStored].quality[3].rating;
+                document.getElementById('interiorC').innerHTML = myData.data[manufacturerStored].quality[4].rating;
+                document.getElementById('accessoriesC').innerHTML = myData.data[manufacturerStored].quality[5].rating;
+                document.getElementById('imgC').innerHTML = '<img src="' + myData.data[manufacturerStored].img + '" />';
             }
         }
     }
